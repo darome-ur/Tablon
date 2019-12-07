@@ -1,12 +1,13 @@
+package objetos;
 
-public class Mensaje {//mensaje que se enviaria en caso de querer respuesta.
+public class MensajeRespuesta {//mensaje que se enviaria en caso de querer respuesta.
 	
 	private String contenido;
 	private String titulo;
 	private String emisario;
 	private int n;//evitar repetidos de mismo emisario, con mismo titulo
 	
-	public Mensaje(String titulo,String contenido,String emisario) {
+	public MensajeRespuesta(String titulo,String contenido,String emisario) {
 		
 		this.contenido = contenido;
 		this.titulo = titulo;

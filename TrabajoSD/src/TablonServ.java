@@ -1,6 +1,9 @@
 import java.io.*;
 import java.net.*;
 
+import objetos.Anuncio;
+import objetos.Tablon;
+
 public class TablonServ {
 	
 	
@@ -25,7 +28,7 @@ public class TablonServ {
 					if(orden.startsWith("PUL"))
 					{
 						//Aqui llega a entrar
-						Perfil p = (Perfil) ois.readObject();//falla aqui
+						Anuncio p = (Anuncio) ois.readObject();//falla aqui
 				
 						publicar(t,p);
 						w.write("Publicacion con exito."+"\r\n");
@@ -105,7 +108,7 @@ public class TablonServ {
 		}
 		return aux;
 	}
-	public static void publicar(Tablon t,Perfil p)
+	public static void publicar(Tablon t,Anuncio p)
 	{
 		t.add(p);
 	}
